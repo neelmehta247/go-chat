@@ -7,6 +7,9 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello, World!")
-	proto.NewHello()
+	msg := &proto.Hello{
+		Message: "hello",
+	}
+
+	fmt.Println(msg.Message)
 }
