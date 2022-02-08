@@ -184,6 +184,7 @@ def go_dependencies():
     go_repository(
         name = "org_golang_google_grpc",
         importpath = "google.golang.org/grpc",
+        build_file_proto_mode = "disable",
         sum = "h1:weqSxi/TMs1SqFRMHCtBgXRs8k3X39QIDEZ0pRcttUg=",
         version = "v1.44.0",
     )

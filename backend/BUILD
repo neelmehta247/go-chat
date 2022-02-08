@@ -12,5 +12,10 @@ go_library(
     srcs = ["main.go"],
     importpath = "github.com/neelmehta247/go-chat/backend",
     visibility = ["//visibility:private"],
-    deps = ["//proto"],
+    deps = [
+        "//backend/_internal/grpc",
+        "//proto",
+        "@org_golang_google_grpc//:go_default_library",
+        "@org_golang_google_grpc//reflection",
+    ],
 )
