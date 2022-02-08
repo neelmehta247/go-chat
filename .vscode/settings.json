@@ -12,10 +12,10 @@
             "-bazel-bin",
             "-bazel-out",
             "-bazel-testlogs",
-            "-bazel-mypkg",
+            "-bazel-go-chat",
         ],
         "formatting.gofumpt": true,
-        "formatting.local": "github.com/my/mypkg",
+        "formatting.local": "github.com/neelmehta247/go-chat",
         "ui.completion.usePlaceholders": true,
         "ui.semanticTokens": true,
         "ui.codelenses": {
@@ -32,4 +32,5 @@
     "go.buildOnSave": "off",
     "go.lintOnSave": "off",
     "go.vetOnSave": "off",
+    "bazel.buildifierFixOnFormat": true,
 }

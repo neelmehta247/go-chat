@@ -1,6 +1,7 @@
 load("@io_bazel_rules_go//go:def.bzl", "go_library")
 load("@rules_proto//proto:defs.bzl", "proto_library")
 load("@io_bazel_rules_go//proto:def.bzl", "go_proto_library")
+load("//tools:tools.bzl", "copy_genfiles")
 
 proto_library(
     name = "hello_proto",
@@ -21,4 +22,9 @@ go_library(
     embed = [":hello_go_proto"],
     importpath = "github.com/neelmehta247/go-chat/proto",
     visibility = ["//visibility:public"],
+)
+
+copy_genfiles(
+    name = "copyall",
+    proto = [":hello_go_proto"],
 )
