@@ -5,7 +5,7 @@ def _copy_genfiles_impl(ctx):
     files_to_copy = []
     cmds = []
     for label in ctx.attr.proto:
-        files = label.files.to_list()
+        files = label.output_groups.go_generated_srcs.to_list()
         files_to_copy = files_to_copy + files
         cmds = cmds + gen_cmds(label, files)
 
