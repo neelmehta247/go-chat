@@ -1,7 +1,7 @@
-.PHONY: build gazelle gazelle-update-repos generate
+.PHONY: run gazelle gazelle-update-repos generate
 
-build:
-	bazel build //backend
+run:
+	bazel run //backend
 
 gazelle:
 	bazel run //:gazelle
