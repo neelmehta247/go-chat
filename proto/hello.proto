@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package hello;
+
+message Hello {
+  string message = 1;
+
+}
+
+message Reponse {
+    string message = 1;
+}
+
+service HelloWorld {
+  // One request followed by multiple responses, set by the batch size.
+  rpc sayMessage(Hello) returns (Reponse);
+}
