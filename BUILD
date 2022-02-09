@@ -1,6 +1,7 @@
 load("@bazel_gazelle//:def.bzl", "gazelle")
 
 # gazelle:prefix github.com/neelmehta247/go-chat
+# gazelle:build_file_name BUILD,BUILD.bazel
 gazelle(name = "gazelle")
 
 gazelle(
